@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import SearchInterface from './herosection-components/SearchInterface'
 
 const HeroSection = () => {
     return (
@@ -13,7 +14,11 @@ const HeroSection = () => {
                     priority
                     className='fixed top-0 left-0 w-full h-screen -z-[10]'
                 />
-                <div className='bg-black-black_transparent h-screen w-full'></div>
+                <div className='flex items-center justify-center h-full'>
+            <SearchInterface />
+
+                </div>
+                <div className='bg-black-black_transparent h-screen w-full top-0 absolute z-[-1]'></div>
             </div>
         </div>
     )
