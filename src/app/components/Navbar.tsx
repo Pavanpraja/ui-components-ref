@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <span className="text-xl sm:text-2xl font-bold">LocalKaro</span>
+                        <span className="text-xl sm:text-2xl font-bold text-gray-400">LocalKaro</span>
                     </div>
 
                     {/* Search Bar with Shots */}
