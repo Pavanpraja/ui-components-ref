@@ -159,9 +159,9 @@ const LocalNavbar = () => {
 
                 {/* Mobile Navigation */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden pb-4 border bg-white border-gray-200 mt-2" data-aos="fade-in">
+                    <div className="lg:hidden pb-4 border bg-white border-gray-200 mt-2 max-h-[calc(100vh-4rem)] overflow-y-auto" data-aos="fade-in">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            <div className="mb-4">
+                            <div className="mb-4 sticky top-0 bg-white pt-2">
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -186,7 +186,7 @@ const LocalNavbar = () => {
                                 </button>
                                 
                                 {isExploreOpenInMobile && (
-                                    <div className="mt-2 bg-gray-50 rounded-md p-2">
+                                    <div className="mt-2 bg-gray-50 rounded-md p-2 max-h-[60vh] overflow-y-auto">
                                         <h2 className="text-sm font-semibold text-gray-700 mb-2">All Categories</h2>
                                         <div className="grid grid-cols-2 gap-2">
                                             {navigationData.categories.map((category) => (

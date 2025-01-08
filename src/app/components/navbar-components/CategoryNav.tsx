@@ -11,6 +11,7 @@ import {
   FaIndustry
 } from 'react-icons/fa';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 const navigationData = {
   sideNav: [
@@ -72,7 +73,7 @@ interface CategoryNavProps {
 const CategoryNav:React.FC<CategoryNavProps> = ({isExploreOpen, handleExploreMenuClose}) => {
 
   return (
-    <div className={`flex flex-col bg-gray-100 h-[90%] p-4 mt-1 transition-all duration-500 ease-in-out ${isExploreOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[1rem]'}`} data-aos="fade-bottom">
+    <div className={`pop-menu relative flex flex-col bg-gray-100 h-[90%] p-4 mt-1 transition-all duration-500 ease-in-out ${isExploreOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[1rem]'}`} data-aos="fade-bottom">
       <div className="flex justify-between h-full">
       {/* Side Navigation */}
       <div className="w-64 border-r border-gray-200 px-4">
