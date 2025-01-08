@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   font-family: 'Noto Sans',sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6{
