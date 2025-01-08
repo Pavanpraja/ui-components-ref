@@ -31,6 +31,10 @@ const LocalNavbar = () => {
         setSearchToggle(prev => !prev);
     }
 
+    const handleExploreMenuClose = (condition:any) =>{
+        setIsExploreOpen(condition);
+    }
+
     return (
         // bg-blue-extradark
         <nav className="w-full bg-transparent text-white shadow-sm fixed top-0 left-0 z-50">
@@ -40,7 +44,7 @@ const LocalNavbar = () => {
                     <div className="flex-shrink-0 flex items-center space-x-2">
                         <span className="text-xl sm:text-2xl font-bold border-r pr-3 border-gray-500"><Image width={160} height={160} src={"https://localkaro.com/images/home/5871localkarowhitelogos1.png"} alt='logo' /></span>
 
-                        <div className="relative explore-container">
+                        <div className=" explore-container">
                             <button
                                 onClick={() => setIsExploreOpen(!isExploreOpen)}
                                 className="flex items-center space-x-1 text-white font-bold hover:text-gray-100 px-2 py-1 text-[.75rem] "
@@ -51,9 +55,9 @@ const LocalNavbar = () => {
 
                             {isExploreOpen && (
                                 <div
-                                    className="w-full relative rounded-lg shadow-lg"
+                                    className={`absolute w-max-7xl mt-5 left-0 right-0 bg-white rounded-lg shadow-lg py-2 border border-gray-100 transform transition-all duration-500 ease-in-out ${isExploreOpen ? 'translate-y-[0.5rem] opacity-100' : 'translate-y-[1rem] opacity-0'}`}
                                 >
-                                    <CategoryNav />
+                                    <CategoryNav handleExploreMenuClose={handleExploreMenuClose} />
                                 </div>
                             )}
                         </div>
