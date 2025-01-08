@@ -5,6 +5,10 @@ import { Search, ChevronDown, Menu, CrossIcon, TrendingUp, Sparkles } from 'luci
 import { RxCross2 } from "react-icons/rx";
 import Image from 'next/image';
 import CategoryNav from './navbar-components/CategoryNav';
+import { IoIosHome } from "react-icons/io";
+import { GiRingingBell } from "react-icons/gi";
+import { FaGift } from "react-icons/fa6";
+import { IoMdCart } from "react-icons/io";
 
 const LocalNavbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -44,6 +48,7 @@ const LocalNavbar = () => {
                     <div className="flex-shrink-0 flex items-center space-x-2">
                         <span className="text-xl sm:text-2xl font-bold border-r pr-3 border-gray-500"><Image width={160} height={160} src={"https://localkaro.com/images/home/5871localkarowhitelogos1.png"} alt='logo' /></span>
 
+                        <div><IoIosHome /></div>
                         <div className=" explore-container">
                             <button
                                 onClick={() => setIsExploreOpen(!isExploreOpen)}
@@ -102,13 +107,16 @@ const LocalNavbar = () => {
                         </div>
                     </div>
 
+
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
+                    <GiRingingBell />
+                    <FaGift />
+                    <IoMdCart />
                         {/* Explore Dropdown */}
-                        <a href="#" className="text-[.75rem] font-bold text-white hover:text-gray-900 px-2 py-1">Add buisness</a>
-                        <button className="text-[.75rem] font-bold text-white hover:text-gray-900 px-2 py-1">Sign up</button>
+                        <a href="#" className="text-[.75rem] font-bold text-white hover:text-gray-900 px-2 py-1">Add Listing</a>
                         <button className="text-white font-bold px-3 py-1.5 lg:px-4 lg:py-2 rounded-lg bg-blue-darklight hover:bg-blue-dark border-blue-darklight text-[.75rem]">
-                            Create an Account
+                            Login / Signup
                         </button>
                     </div>
 

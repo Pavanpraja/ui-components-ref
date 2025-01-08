@@ -12,7 +12,7 @@ const HeroSection = () => {
                     fill
                     style={{ objectFit: "cover" }}
                     priority
-                    className='fixed top-0 left-0 w-full h-screen -z-[10]'
+                    className='fixed top-0 left-0 w-full h-screen -z-[10] aspect-auto'
                 />
                 <div className='flex items-center justify-center h-full'>
             <SearchInterface />
